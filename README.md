@@ -6,21 +6,21 @@ Please follow below steps to deploy NodeJSMonitoring source code inside a Docker
 
 * Run below command in order to build docker image out of Dockerfile. It will compile the source code and build Node.js application inside the docker image.
 
-     **docker build -t node-express-monitoring . **
+            docker build -t node-express-monitoring .
     
 * Run below command to spwan a Container out of an image we just built,
         
-    **docker run -p 3000:3000 --name sample_node_container -d node-express-monitoring **
+            docker run -p 3000:3000 --name sample_node_container -d node-express-monitoring
     
 * Now we can access the Node.js application we just built in a Container. Hit below urls from your browser to view UI and other monitoring stats.
 
 **URLs:**
 
- ** 	App UI:** http://<host-ip>:3000
+            App UI: http://<host-ip>:3000
 
- ** 	Appmetrics Dashboard:** http://<host-ip>:3000/appmetrics-dash/
+	        Appmetrics Dashboard: http://<host-ip>:3000/appmetrics-dash/
 
- ** 	Prometheus Metrics:** http://<host-ip>:3000/metrics
+	        Prometheus Metrics: http://<host-ip>:3000/metrics
 
 
 ### Application Monitoring:
@@ -78,12 +78,12 @@ The commands exit status indicates the health status of the container. The follo
 
 
 * We can also run below command to get the detailed view of Container health in JSON format.
-
-    **docker inspect --format='{{json .State.Health}}' sample_node_container **
+        
+            docker inspect --format='{{json .State.Health}}' sample_node_container
 
 * We can also get the Docker stats in JSON format by running below command.
 
-    **docker stats --no-stream --format "{{ json . }}" sample_node_container **
+            docker stats --no-stream --format "{{ json . }}" sample_node_container
     
 ![alt text](/images/docker_stats1.png)
 
