@@ -89,4 +89,4 @@ Here, we use:
 
 ![alt text](/images/docker_stats2.png)
 
-       Taking the output of above json, we can then make any short of alert mechanism to report about the container health.
+    6. Taking the output of above json, we can then make any short of alert mechanism to report about the container health.
