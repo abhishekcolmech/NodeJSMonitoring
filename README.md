@@ -86,6 +86,7 @@ Here, we use:
         ** docker stats --no-stream --format "{{ json . }}" sample_node_container **
     
 ![alt text](/images/docker-stats1.png)
+
 ![alt text](/images/docker-stats2.png)
 
        Taking the output of above json, we can then make any short of alert mechanism to report about the container health.
