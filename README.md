@@ -2,8 +2,10 @@
 
 Please follow below steps to deploy NodeJSMonitoring source code inside a Docker Container.
 
-* Clone the repo with master branch and go inside the directory,
-
+* Clone the repo to your local machine, go inside the directory and checkout with master branch.
+	
+ ![alt text](/images/git_clone.png)
+	    
 * Run below command in order to build docker image out of Dockerfile. It will compile the source code and build Node.js application inside the docker image.
 
             docker build -t node-express-monitoring .
@@ -18,9 +20,9 @@ Please follow below steps to deploy NodeJSMonitoring source code inside a Docker
 
             App UI: http://<host-ip>:3000
 
-	        Appmetrics Dashboard: http://<host-ip>:3000/appmetrics-dash/
+	    Appmetrics Dashboard: http://<host-ip>:3000/appmetrics-dash/
 
-	        Prometheus Metrics: http://<host-ip>:3000/metrics
+	    Prometheus Metrics: http://<host-ip>:3000/metrics
 
 
 ### Application Monitoring:
