@@ -3,6 +3,10 @@
 Please follow below steps to deploy NodeJSMonitoring source code inside a Docker Container.
 
 * Clone the repo to your local machine, go inside the directory and checkout with master branch.
+	    
+	    git clone https://github.com/abhishekcolmech/NodeJSMonitoring.git
+	    
+	    cd NodeJSMonitoring/
 	
  ![alt text](/images/git_clone.png)
 	    
