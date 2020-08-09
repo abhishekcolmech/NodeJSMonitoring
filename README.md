@@ -2,25 +2,27 @@
 
 Please follow below steps to deploy NodeJSMonitoring source code inside a Docker Container.
 
-* Clone the repo with master branch and go inside the directory,
-
+* Clone the repo to your local machine, go inside the directory and checkout with master branch.
+	
+ ![alt text](/images/git_clone.png)
+	    
 * Run below command in order to build docker image out of Dockerfile. It will compile the source code and build Node.js application inside the docker image.
 
- **  	docker build -t node-express-monitoring . **
+            docker build -t node-express-monitoring .
     
 * Run below command to spwan a Container out of an image we just built,
         
-** 	docker run -p 3000:3000 --name sample_node_container -d node-express-monitoring **
+            docker run -p 3000:3000 --name sample_node_container -d node-express-monitoring
     
 * Now we can access the Node.js application we just built in a Container. Hit below urls from your browser to view UI and other monitoring stats.
 
 **URLs:**
 
- ** 	App UI:** http://<host-ip>:3000
+            App UI: http://<host-ip>:3000
 
- ** 	Appmetrics Dashboard:** http://<host-ip>:3000/appmetrics-dash/
+	    Appmetrics Dashboard: http://<host-ip>:3000/appmetrics-dash/
 
- ** 	Prometheus Metrics:** http://<host-ip>:3000/metrics
+	    Prometheus Metrics: http://<host-ip>:3000/metrics
 
 
 ### Application Monitoring:
@@ -60,17 +62,17 @@ Here, we use:
 
    If health check is enabled, then the container can have three states:
 
-** 	Starting:** Initial status when the container is still starting.
+    **Starting:** Initial status when the container is still starting.
 
-**	Healthy:** If the command succeeds, then the container is healthy.
+    **Healthy:** If the command succeeds, then the container is healthy.
 
-** 	Unhealthy:** If a single run of the <command> takes longer than the specified timeout, then it is considered unhealthy. If a health check fails, then the <command> will run retries number of times and will be declared unhealthy if the <command> still fails.
+    **Unhealthy:** If a single run of the <command> takes longer than the specified timeout, then it is considered unhealthy. If a health check fails, then the <command> will run retries number of times and will be declared unhealthy if the <command> still fails.
 
 The commands exit status indicates the health status of the container. The following values are allowed:
 
-  **0**: container is healthy.
+   **0**: container is healthy.
 
-  **1**: container is not healthy.
+   **1**: container is not healthy.
 
 * We can see the container health is like below. As it shows STATUS "healthy"
 
@@ -78,12 +80,12 @@ The commands exit status indicates the health status of the container. The follo
 
 
 * We can also run below command to get the detailed view of Container health in JSON format.
-
-** 	docker inspect --format='{{json .State.Health}}' sample_node_container **
+        
+            docker inspect --format='{{json .State.Health}}' sample_node_container
 
 * We can also get the Docker stats in JSON format by running below command.
 
-** 	docker stats --no-stream --format "{{ json . }}" sample_node_container **
+            docker stats --no-stream --format "{{ json . }}" sample_node_container
     
 ![alt text](/images/docker_stats1.png)
 
