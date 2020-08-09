@@ -16,11 +16,11 @@ Please follow below steps to deploy NodeJSMonitoring source code inside a Docker
 
 **URLs:**
 
-        **App UI:** http://<host-ip>:3000
+ **App UI:** http://<host-ip>:3000
 
-        **Appmetrics Dashboard:** http://<host-ip>:3000/appmetrics-dash/
+ **Appmetrics Dashboard:** http://<host-ip>:3000/appmetrics-dash/
 
-        **Prometheus Metrics:** http://<host-ip>:3000/metrics
+ **Prometheus Metrics:** http://<host-ip>:3000/metrics
 
 
 ### Application Monitoring:
