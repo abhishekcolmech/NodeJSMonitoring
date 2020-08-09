@@ -6,7 +6,7 @@ In this PoC we use:
 
 * [appmetrics-dash](https://www.npmjs.com/package/appmetrics-dash): The appmetrics dashboard (path: <host>/appmetrics-dash) provides a live dashboard indicating various metrics of the application: memory,CPU HTTP Requests etc....
  
- ![alt text](/AppMetrics.png)
+ ![alt text](/images/AppMetrics.png)
  
  
 * [appmetrics-prometheus](https://www.npmjs.com/package/appmetrics-prometheus): Provides an endpoint (path: <host>/metrics) giving the metrics of the application in prometheus style output
